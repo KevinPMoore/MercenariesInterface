@@ -2,7 +2,55 @@
     "mercenaryList": [
         {
             "id": 1,
-            "name": "",
+            "name": "Bulwark",
+            "hp": 85,
+            "attack": 83,
+            "defense": 105,
+            "specialAttack": 78,
+            "specialDefense": 105,
+            "speed": 79,
+            "level": 0,
+            "moveList": []
+        },
+        {
+            "id": 2,
+            "name": "Thief",
+            "hp": 0,
+            "attack": 0,
+            "defense": 0,
+            "specialAttack": 0,
+            "specialDefense": 0,
+            "speed": 0,
+            "level": 0,
+            "moveList": []
+        },
+        {
+            "id": 3,
+            "name": "Marksman",
+            "hp": 0,
+            "attack": 0,
+            "defense": 0,
+            "specialAttack": 0,
+            "specialDefense": 0,
+            "speed": 0,
+            "level": 0,
+            "moveList": []
+        },
+        {
+            "id": 4,
+            "name": "Cleric",
+            "hp": 0,
+            "attack": 0,
+            "defense": 0,
+            "specialAttack": 0,
+            "specialDefense": 0,
+            "speed": 0,
+            "level": 0,
+            "moveList": []
+        },
+        {
+            "id": 5,
+            "name": "Evoker",
             "hp": 0,
             "attack": 0,
             "defense": 0,

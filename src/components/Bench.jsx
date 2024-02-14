@@ -9,10 +9,10 @@ function Bench({ mercenaryList }) {
     const cardWidth = 12 / mercenaryList.length;
     const team = mercenaryList.map(mercenary => {
         return (
-            <Grid item xs={cardWidth} key={mercenary.id}>
+            <Grid item xs={cardWidth} key={mercenary?.id}>
                 <MercenaryCard
                     mercenary={mercenary}
-                    index={mercenary.indexOf(mercenary)}
+                    index={mercenaryList.indexOf(mercenary)}
                     selected={selectedIndex === mercenaryList.indexOf(mercenary)}
                     setSelectedIndex={setSelectedIndex}
                 />

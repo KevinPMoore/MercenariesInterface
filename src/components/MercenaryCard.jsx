@@ -10,7 +10,13 @@ function MercenaryCard({ index, mercenary, selected, setSelectedIndex }) {
     return (
         <Card elevation={selected ? 8 : 1} onClick={handleCardClick}>
             <div style={{ border: selected ? "2px solid gold" : null }}>
-                <p>An image will go here</p>
+                <p>
+                    An image of
+                    {' '}
+                    {mercenary?.name}
+                    {' '}
+                    will go here
+                </p>
                 {hitPoints}
             </div>
         </Card>
