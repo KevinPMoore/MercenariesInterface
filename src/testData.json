@@ -1,0 +1,24 @@
+{
+    "mercenaryList": [
+        {
+            "id": 1,
+            "name": "",
+            "hp": 0,
+            "attack": 0,
+            "defense": 0,
+            "specialAttack": 0,
+            "specialDefense": 0,
+            "speed": 0,
+            "level": 0,
+            "moveList": []
+        }
+    ],
+    "moveList": [
+        {
+            "name": "",
+            "damageType": "special",
+            "power": 0,
+            "effect": "TODO"
+        }
+    ]
+}
