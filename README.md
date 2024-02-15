@@ -10,6 +10,6 @@
     the character concept.
         - Bulwark = Blastoise
         - Thief = Crobat
-        - Marksman = 
+        - Marksman = Feraligatr
         - Cleric = Venusaur
-        - Evoker = 
+        - Evoker = Porygon-Z

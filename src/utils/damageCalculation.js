@@ -1,7 +1,4 @@
 const damageCalculation = (attacker, defender, move) => {
-    if (move?.damageType === "status") {
-        console.log("not a damaging move");
-    }
     const atkStat = move?.damageType === "physical" ? attacker?.attack : attacker?.specialAttack;
     const defStat = move?.damageType === "physical" ? defender?.defense : defender?.specialDefense;
     const movePower = typeof move?.power === "number" ? move?.power : 0;
