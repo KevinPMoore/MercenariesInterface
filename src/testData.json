@@ -9,8 +9,7 @@
             "specialAttack": 70,
             "specialDefense": 105,
             "speed": 70,
-            "level": 0,
-            "statTotal": 535,
+            "level": 17,
             "moveList": []
         },
         {
@@ -23,7 +22,6 @@
             "specialDefense": 80,
             "speed": 120,
             "level": 50,
-            "statTotal": 0,
             "moveList": []
         },
         {
@@ -36,7 +34,6 @@
             "specialDefense": 85,
             "speed": 90,
             "level": 1,
-            "statTotal": 0,
             "moveList": []
         },
         {
@@ -49,7 +46,6 @@
             "specialDefense": 110,
             "speed": 80,
             "level": 50,
-            "statTotal": 535,
             "moveList": []
         },
         {
@@ -62,16 +58,20 @@
             "specialDefense": 90,
             "speed": 85,
             "level": 100,
-            "statTotal": 535,
             "moveList": []
         }
     ],
     "moveList": [
         {
-            "name": "",
-            "damageType": "special",
-            "power": 0,
-            "effect": "TODO"
+            "id": 1,
+            "name": "Pound",
+            "power": 40,
+            "damageType": "physical",
+            "effectText": "TODO",
+            "secondaryEffect": {
+                "effectName": "",
+                "effectChance": 30
+            }
         }
     ]
 }
