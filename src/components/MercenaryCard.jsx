@@ -7,6 +7,11 @@ function MercenaryCard({ index, mercenary, selected, setSelectedIndex }) {
     };
 
     const hitPoints = `HP: ${mercenary?.hp} / ${mercenary?.hp}`;
+
+    //TODO: Remove this after initial balancing
+    const calcBST = !!selected && (mercenary.hp + mercenary.attack + mercenary.defense + mercenary.specialAttack + mercenary.specialDefense + mercenary.speed);
+    console.log(calcBST);
+
     return (
         <Card elevation={selected ? 8 : 1} onClick={handleCardClick}>
             <div style={{ border: selected ? "2px solid gold" : null }}>
