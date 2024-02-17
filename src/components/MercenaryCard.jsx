@@ -6,7 +6,7 @@ function MercenaryCard({ index, mercenary, selected, setSelectedIndex }) {
         setSelectedIndex(index);
     };
 
-    const hitPoints = `HP: ${mercenary?.hp} / ${mercenary?.hp}`;
+    const hitPointDisplay = `HP: ${mercenary?.currentHP} / ${mercenary?.currentHPMax}`;
 
     return (
         <Card elevation={selected ? 8 : 1} onClick={handleCardClick}>
@@ -18,7 +18,7 @@ function MercenaryCard({ index, mercenary, selected, setSelectedIndex }) {
                     {' '}
                     will go here
                 </p>
-                {hitPoints}
+                {hitPointDisplay}
             </div>
         </Card>
     );

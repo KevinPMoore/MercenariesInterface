@@ -1,8 +1,9 @@
-const damageCalculation = (attacker, defender, move) => {
+const calculateDamage = (attacker, defender, move) => {
     const atkStat = move?.damageType === "physical" ? attacker?.attack : attacker?.specialAttack;
     const defStat = move?.damageType === "physical" ? defender?.defense : defender?.specialDefense;
     const movePower = typeof move?.power === "number" ? move?.power : 0;
 
+    //TODO: Move crit check to its own helper fx
     const critCheck = Math.floor(Math.random() * 100) <= 4;
     if (critCheck) {
         console.log("Critical hit!");
@@ -16,4 +17,4 @@ const damageCalculation = (attacker, defender, move) => {
     return damage;
 };
 
-export default damageCalculation;
+export default calculateDamage;

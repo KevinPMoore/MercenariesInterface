@@ -1,4 +1,4 @@
-const secondaryMoveEffect = (attacker, defender, move) => {
+const handleSecondaryMoveEffect = (attacker, defender, move) => {
     //TODO: Check if secondary effect can be applied to defender
     //TODO: Check if attacker impacts secondary effect or occurance chance
     //TODO: Roll secondary effect chance of move
@@ -7,4 +7,4 @@ const secondaryMoveEffect = (attacker, defender, move) => {
     console.log(attacker, defender, move);
 };
 
-export default secondaryMoveEffect;
+export default handleSecondaryMoveEffect;
