@@ -15,6 +15,7 @@ const unusedMercList = [
         currentSpecialDefense: null,
         currentSpeed: null,
         level: 50,
+        ability: {},
         moveList: []
     },
     {
@@ -33,6 +34,7 @@ const unusedMercList = [
         currentSpecialDefense: null,
         currentSpeed: null,
         level: 1,
+        ability: {},
         moveList: []
     },
     {
@@ -51,6 +53,7 @@ const unusedMercList = [
         currentSpecialDefense: null,
         currentSpeed: null,
         level: 50,
+        ability: {},
         moveList: []
     },
     {
@@ -69,6 +72,7 @@ const unusedMercList = [
         currentSpecialDefense: null,
         currentSpeed: null,
         level: 100,
+        ability: {},
         moveList: []
     }
 ];

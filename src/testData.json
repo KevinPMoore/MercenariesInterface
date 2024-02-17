@@ -17,6 +17,7 @@
             "currentSpecialDefense": null,
             "currentSpeed": null,
             "level": 17,
+            "ability": {},
             "moveList": []
         }
     ],
