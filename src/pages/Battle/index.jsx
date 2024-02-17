@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
-import Bench from "../../components/Bench";
+import Enemies from "./Enemies";
+import Party from "../../components/Party";
 import BattleText from "../../components/BattleText";
 import MoveSelect from "../../components/MoveSelect";
 import testData from "../../testData.json";
@@ -14,9 +15,13 @@ function Battle() {
 
     return (
         <Grid container height="100%">
-            <Grid item xs={12} height="75%">
-                <Bench mercenaryList={testData?.mercenaryList} />
+            <Grid item xs={12} height="35%">
+                <Enemies enemyList={testData?.enemyList} />
             </Grid>
+            <Grid item xs={12} height="35%">
+                <Party mercenaryList={testData?.mercenaryList} />
+            </Grid>
+            <Grid item xs={12} height="5%" />
             <Grid item xs={8} height="25%">
                 <BattleText />
             </Grid>

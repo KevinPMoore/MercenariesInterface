@@ -3,13 +3,28 @@ import { Grid } from "@mui/material";
 import PropTypes from "prop-types";
 import MercenaryCard from "./MercenaryCard";
 
-function Bench({ mercenaryList }) {
+function Party({ mercenaryList }) {
     const [selectedIndex, setSelectedIndex] = useState(null);
 
-    const cardWidth = 12 / mercenaryList.length;
+    let cardWidth;
+
+    switch (mercenaryList.length) {
+        case 1:
+            cardWidth = 8;
+            break;
+        case 2:
+            cardWidth = 5;
+            break;
+        case 3:
+            cardWidth = 3;
+            break;
+        default:
+            cardWidth = 1;
+    }
+
     const team = mercenaryList.map(mercenary => {
         return (
-            <Grid item xs={cardWidth} key={mercenary?.id}>
+            <Grid item xs={cardWidth} key={mercenary?.id} height="90%">
                 <MercenaryCard
                     mercenary={mercenary}
                     index={mercenaryList.indexOf(mercenary)}
@@ -21,14 +36,14 @@ function Bench({ mercenaryList }) {
     });
 
     return (
-        <Grid container height="100%" justifyContent="space-evenly">
+        <Grid container height="100%" justifyContent="space-evenly" alignItems="flex-end">
             {team}
         </Grid>
     );
 }
 
-Bench.propTypes = {
+Party.propTypes = {
     mercenaryList: PropTypes.array,
 };
 
-export default Bench;
+export default Party;

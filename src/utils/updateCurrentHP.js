@@ -3,7 +3,8 @@ const updateCurrentHP = (mercenary, adjustment = 0) => {
     if (!mercenary?.currentHP) {
         Object.assign(mercenary, { currentHP: mercenary?.currentHPMax });
     } else {
-        const newHP = mercenary.currentHP + adjustment;
+        //TODO: Put in a stop so that HP doesn't go below 0
+        const newHP = mercenary.currentHP - adjustment;
         Object.assign(mercenary, { currentHP: newHP });
     }
 };

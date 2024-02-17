@@ -1,7 +1,8 @@
 import { Card, Typography } from "@mui/material";
 import PropTypes from "prop-types";
 
-function MercenaryCard({ index, mercenary, selected, setSelectedIndex }) {
+function EnemyCard({ index, enemy, selected, setSelectedIndex }) {
+    //TODO: Determine if this can be combined with other character card types for DRY purposes
     const handleCardClick = () => {
         if (selected) {
             setSelectedIndex(null);
@@ -10,16 +11,17 @@ function MercenaryCard({ index, mercenary, selected, setSelectedIndex }) {
         }
     };
 
-    const hitPointDisplay = `HP: ${mercenary?.currentHP} / ${mercenary?.currentHPMax}`;
+    //TODO: Make the HP look like some sort of bar
+    const hitPointDisplay = `HP: ${enemy?.currentHP} / ${enemy?.maxHP}`;
 
     return (
-        <div style={{ border: selected ? "2px solid gold" : null, height: "100%" }}>
+        <div style={{ border: selected ? "2px solid red" : null, height: "100%" }}>
             <Card elevation={selected ? 8 : 1} onClick={handleCardClick} style={{ height: "100%" }}>
                 <div style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
                     <Typography variant="body1" gutterBottom>
                         An image of
                         {' '}
-                        {mercenary?.name}
+                        {enemy?.name}
                         {' '}
                         will go here
                     </Typography>
@@ -32,11 +34,11 @@ function MercenaryCard({ index, mercenary, selected, setSelectedIndex }) {
     );
 }
 
-MercenaryCard.propTypes = {
+EnemyCard.propTypes = {
     index: PropTypes.number,
-    mercenary: PropTypes.object,
+    enemy: PropTypes.object,
     selected: PropTypes.bool,
     setSelectedIndex: PropTypes.func,
 };
 
-export default MercenaryCard;
+export default EnemyCard;

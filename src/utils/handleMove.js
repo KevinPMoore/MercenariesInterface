@@ -1,4 +1,5 @@
-import damageCalculation from "./damageCalculation";
+import calculateDamage from "./calculateDamage";
+import updateCurrentHP from "./updateCurrentHP";
 
 const handleMove = (attacker, defender, move) => {
     if (move?.damageType === "status") {
@@ -6,7 +7,9 @@ const handleMove = (attacker, defender, move) => {
         //TODO: Return result of status application
     }
 
-    return damageCalculation(attacker, defender, move);
+    const damage = calculateDamage(attacker, defender, move);
+
+    updateCurrentHP(defender, damage);
 };
 
 export default handleMove;
