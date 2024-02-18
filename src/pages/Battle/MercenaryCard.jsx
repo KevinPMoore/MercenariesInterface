@@ -1,4 +1,4 @@
-import { Card, Typography } from "@mui/material";
+import { Card, Grid, Typography } from "@mui/material";
 import PropTypes from "prop-types";
 import HPBar from "./HPBar";
 
@@ -11,20 +11,24 @@ function MercenaryCard({ index, mercenary, selected, setSelectedIndex }) {
         }
     };
 
-    //TODO: Refactor this to use grid on card content
     return (
-        <div style={{ border: selected ? "2px solid gold" : null, height: "100%" }}>
+        <div style={{ border: selected ? "2px solid gold" : "1px solid gray", borderRadius: "4px", height: "100%" }}>
             <Card elevation={selected ? 8 : 1} onClick={handleCardClick} style={{ height: "100%" }}>
-                <div style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
-                    <Typography variant="body1" gutterBottom>
-                        An image of
-                        {' '}
-                        {mercenary?.name}
-                        {' '}
-                        will go here
-                    </Typography>
-                    <HPBar currentHP={mercenary?.currentHP} maxHP={mercenary?.currentHPMax} />
-                </div>
+                <Grid container justifyContent="space-between" height="100%">
+                    <Grid item xs={12} height="80%">
+                        <Typography variant="body1" gutterBottom>
+                            An image of
+                            {' '}
+                            {mercenary?.name}
+                            {' '}
+                            will go here
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} height="20%">
+                        <HPBar currentHP={mercenary?.currentHP} maxHP={mercenary?.currentHPMax} />
+                    </Grid>
+
+                </Grid>
             </Card>
         </div>
     );

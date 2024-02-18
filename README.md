@@ -1,5 +1,20 @@
 # Welcome to Mercenaries
 
+## To-Dos
+    - Unit Cards
+        -- Refactor to use Grid for layout
+    - HP Bar
+        -- Bar changes colors at different %
+        -- Bar changing is animated
+    - Combat
+        -- Move selection populates
+        -- Move identifies attacker and target
+        -- Move applies damage
+    - Text Box
+        -- Text box displays text
+        -- New text entries replace old ones
+        -- Text animates
+
 ## TestData notes
 
 ### Mercenaries
