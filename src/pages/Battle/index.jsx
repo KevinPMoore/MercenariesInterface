@@ -1,8 +1,9 @@
 import { Grid } from "@mui/material";
 import Enemies from "./Enemies";
-import Party from "../../components/Party";
-import BattleText from "../../components/BattleText";
-import MoveSelect from "../../components/MoveSelect";
+import Party from "./Party";
+//TODO: Rename BattleText and MoveSelect once they are more fleshed out
+import BattleText from "../../components/TextBox";
+import MoveSelect from "../../components/OptionSelect";
 import testData from "../../testData.json";
 import setStatsForLevel from "../../utils/setStatsForLevel";
 import updateCurrentHP from "../../utils/updateCurrentHP";

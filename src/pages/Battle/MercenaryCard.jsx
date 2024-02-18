@@ -1,5 +1,6 @@
 import { Card, Typography } from "@mui/material";
 import PropTypes from "prop-types";
+import HPBar from "./HPBar";
 
 function MercenaryCard({ index, mercenary, selected, setSelectedIndex }) {
     const handleCardClick = () => {
@@ -10,8 +11,7 @@ function MercenaryCard({ index, mercenary, selected, setSelectedIndex }) {
         }
     };
 
-    const hitPointDisplay = `HP: ${mercenary?.currentHP} / ${mercenary?.currentHPMax}`;
-
+    //TODO: Refactor this to use grid on card content
     return (
         <div style={{ border: selected ? "2px solid gold" : null, height: "100%" }}>
             <Card elevation={selected ? 8 : 1} onClick={handleCardClick} style={{ height: "100%" }}>
@@ -23,9 +23,7 @@ function MercenaryCard({ index, mercenary, selected, setSelectedIndex }) {
                         {' '}
                         will go here
                     </Typography>
-                    <Typography variant="body1" fontWeight="bold" gutterBottom>
-                        {hitPointDisplay}
-                    </Typography>
+                    <HPBar currentHP={mercenary?.currentHP} maxHP={mercenary?.currentHPMax} />
                 </div>
             </Card>
         </div>
