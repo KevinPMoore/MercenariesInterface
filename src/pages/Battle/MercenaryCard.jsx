@@ -1,6 +1,8 @@
 import { Card, Grid, Typography } from "@mui/material";
 import PropTypes from "prop-types";
 import HPBar from "./HPBar";
+//TODO: Remove this after testing bar animation
+import updateCurrentHP from "../../utils/updateCurrentHP";
 
 function MercenaryCard({ index, mercenary, selected, setSelectedIndex }) {
     const handleCardClick = () => {
@@ -11,11 +13,17 @@ function MercenaryCard({ index, mercenary, selected, setSelectedIndex }) {
         }
     };
 
+    console.log(mercenary);
+
+    const ouch = () => {
+        updateCurrentHP(mercenary, 10);
+    };
+
     return (
         <div style={{ border: selected ? "2px solid gold" : "1px solid gray", borderRadius: "4px", height: "100%" }}>
             <Card elevation={selected ? 8 : 1} onClick={handleCardClick} style={{ height: "100%" }}>
                 <Grid container justifyContent="space-between" height="100%">
-                    <Grid item xs={12} height="80%">
+                    <Grid item xs={12} height="70%">
                         <Typography variant="body1" gutterBottom>
                             An image of
                             {' '}
@@ -23,6 +31,9 @@ function MercenaryCard({ index, mercenary, selected, setSelectedIndex }) {
                             {' '}
                             will go here
                         </Typography>
+                    </Grid>
+                    <Grid item xs={12} height="10%">
+                        <button onClick={ouch}>Ouch</button>
                     </Grid>
                     <Grid item xs={12} height="20%">
                         <HPBar currentHP={mercenary?.currentHP} maxHP={mercenary?.currentHPMax} />
