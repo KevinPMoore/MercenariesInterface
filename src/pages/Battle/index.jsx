@@ -4,6 +4,7 @@ import CharacterGroup from "./CharacterGroup";
 import BattleText from "../../components/TextBox";
 import MoveSelect from "../../components/OptionSelect";
 import testData from "../../testData.json";
+import TurnTracker from "../../components/TurnTracker";
 
 function Battle() {
     return (
@@ -15,11 +16,14 @@ function Battle() {
                 <CharacterGroup characterList={testData?.mercenaryList} type="mercenary" />
             </Grid>
             <Grid item xs={12} height="5%" />
-            <Grid item xs={8} height="25%">
+            <Grid item xs={6} height="25%">
                 <BattleText />
             </Grid>
             <Grid item xs={4} height="25%">
                 <MoveSelect />
+            </Grid>
+            <Grid item xs={2} height="25%">
+                <TurnTracker />
             </Grid>
         </Grid>
     );

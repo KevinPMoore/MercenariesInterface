@@ -1,11 +1,6 @@
 # Welcome to Mercenaries
 
 ## To-Dos
-    - Unit Cards
-        -- Refactor to use Grid for layout
-    - HP Bar
-        -- Bar changes colors at different %
-        -- Bar changing is animated
     - Combat
         -- Move selection populates
         -- Move identifies attacker and target
@@ -14,6 +9,15 @@
         -- Text box displays text
         -- New text entries replace old ones
         -- Text animates
+    - Turns
+        -- Turn tracker populates
+        -- Turn tracker updates
+        -- Only the turn character can move
+        -- After an action, the turn character's turn ends
+    - Enemy AI
+        -- Enemies have moves to choose from
+        -- Enemies are able to select targets
+        -- Enemies have fallthrough options
 
 ## TestData notes
 
