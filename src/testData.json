@@ -25,8 +25,8 @@
         {
             "id": 1,
             "name": "Target Dummy",
-            "currentHP": null,
-            "maxHP": 100,
+            "currentHP": 50,
+            "currentHPMax": 100,
             "defense": 100,
             "specialDefense": 50
         }

@@ -1,15 +1,15 @@
-const updateCurrentHP = (mercenary, adjustment = 0) => {
-    //TODO: See if there is a way to optimize this and not have to check !mercenary?.currentHP
-    if (!mercenary?.currentHP) {
-        Object.assign(mercenary, { currentHP: mercenary?.currentHPMax });
+const updateCurrentHP = (character, adjustment = 0) => {
+    //TODO: See if there is a way to optimize this and not have to check !character?.currentHP
+    if (!character?.currentHP) {
+        Object.assign(character, { currentHP: character?.currentHPMax });
     } else {
         let newHP;
-        if (mercenary.currentHP - adjustment > 0) {
-            newHP = mercenary.currentHP - adjustment;
+        if (character.currentHP - adjustment > 0) {
+            newHP = character.currentHP - adjustment;
         } else {
             newHP = 0;
         }
-        Object.assign(mercenary, { currentHP: newHP });
+        Object.assign(character, { currentHP: newHP });
     }
 };
 

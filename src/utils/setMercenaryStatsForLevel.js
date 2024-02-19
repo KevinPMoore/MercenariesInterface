@@ -1,4 +1,4 @@
-const setStatsForLevel = (mercenary) => {
+const setMercenaryStatsForLevel = (mercenary) => {
     const growthModifier = mercenary.level / 50;
 
     const levelStats = {
@@ -13,4 +13,4 @@ const setStatsForLevel = (mercenary) => {
     Object.assign(mercenary, levelStats);
 };
 
-export default setStatsForLevel;
+export default setMercenaryStatsForLevel;
