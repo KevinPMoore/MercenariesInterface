@@ -1,8 +1,6 @@
 import { Card, Grid, Typography } from "@mui/material";
 import PropTypes from "prop-types";
 import HPBar from "./HPBar";
-//TODO: Remove this after testing bar animation
-import updateCurrentHP from "../../utils/updateCurrentHP";
 
 function MercenaryCard({ index, mercenary, selected, setSelectedIndex }) {
     const handleCardClick = () => {
@@ -11,12 +9,6 @@ function MercenaryCard({ index, mercenary, selected, setSelectedIndex }) {
         } else {
             setSelectedIndex(index);
         }
-    };
-
-    console.log(mercenary);
-
-    const ouch = () => {
-        updateCurrentHP(mercenary, 10);
     };
 
     return (
@@ -32,10 +24,7 @@ function MercenaryCard({ index, mercenary, selected, setSelectedIndex }) {
                             will go here
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} height="10%">
-                        <button onClick={ouch}>Ouch</button>
-                    </Grid>
-                    <Grid item xs={12} height="20%">
+                    <Grid item xs={12} height="30%">
                         <HPBar currentHP={mercenary?.currentHP} maxHP={mercenary?.currentHPMax} />
                     </Grid>
 
