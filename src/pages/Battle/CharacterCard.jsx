@@ -40,7 +40,7 @@ CharacterCard.propTypes = {
     character: PropTypes.object,
     selected: PropTypes.bool,
     setSelectedIndex: PropTypes.func,
-    type: PropTypes.oneOf("enemy", "mercenary"),
+    type: PropTypes.oneOf(["enemy", "mercenary"]),
 };
 
 export default CharacterCard;

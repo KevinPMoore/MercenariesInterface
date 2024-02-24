@@ -54,7 +54,7 @@ function CharacterGroup({ characterList, type }) {
 
 CharacterGroup.propTypes = {
     characterList: PropTypes.array,
-    type: PropTypes.oneOf("enemy", "mercenary"),
+    type: PropTypes.oneOf(["enemy", "mercenary"]),
 };
 
 export default CharacterGroup;
