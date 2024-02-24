@@ -4,19 +4,22 @@ import CharacterGroup from "./CharacterGroup";
 import BattleText from "../../components/TextBox";
 import MoveSelect from "../../components/OptionSelect";
 import testData from "../../testData.json";
-//import TurnTracker from "../../components/TurnTracker";
+import TurnTracker from "../../components/TurnTracker";
 
-//TODO: Fix layout to move turn tracker to side
 function Battle() {
     return (
         <Grid container direction="column" height="100%" width="100%">
-            <Grid item xs={4}>
-                <CharacterGroup characterList={testData?.enemyList} type="enemy" />
+            <Grid item xs={9}>
+                <Grid container height="100%" width="100%" >
+                    <Grid item xs={10} height="100%">
+                        <CharacterGroup characterList={testData?.enemyList} type="enemy" />
+                        <CharacterGroup characterList={testData?.mercenaryList} type="mercenary" />
+                    </Grid>
+                    <Grid item xs={2}>
+                        <TurnTracker />
+                    </Grid>
+                </Grid>
             </Grid>
-            <Grid item xs={4}>
-                <CharacterGroup characterList={testData?.mercenaryList} type="mercenary" />
-            </Grid>
-            <Grid item xs={1} />
             <Grid item xs={3}>
                 <Grid container height="100%" width="100%">
                     <BattleText width="70%" />

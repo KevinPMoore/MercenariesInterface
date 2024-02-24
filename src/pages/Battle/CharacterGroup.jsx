@@ -33,7 +33,7 @@ function CharacterGroup({ characterList, type }) {
 
     const team = characterList.map(character => {
         return (
-            <Grid item xs={cardWidth} key={character?.id} height="90%">
+            <Grid item xs={cardWidth} key={character?.id} height="94%" className="bingus">
                 <CharacterCard
                     character={character}
                     index={characterList.indexOf(character)}
@@ -46,7 +46,7 @@ function CharacterGroup({ characterList, type }) {
     });
 
     return (
-        <Grid container height="100%" justifyContent="space-evenly" alignItems="flex-end">
+        <Grid container height="50%" justifyContent="space-evenly">
             {team}
         </Grid>
     );
