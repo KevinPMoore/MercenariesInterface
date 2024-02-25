@@ -27,8 +27,9 @@
             "name": "Target Dummy",
             "currentHP": 50,
             "currentHPMax": 100,
-            "defense": 100,
-            "specialDefense": 50
+            "currentDefense": 100,
+            "currentSpecialDefense": 50,
+            "currentSpeed": 20
         }
     ]
 }
