@@ -4,13 +4,12 @@ import { Grid } from "@mui/material";
 function TurnIndicator({ turnList }) {
     const iconList = turnList.map(turn => {
         return (
-            <Grid item xs={12} key={turn?.id} height="20%">
+            <Grid item xs={2} key={turn?.id} width="100%">
                 <div style={{ border: "1px solid green", height: "100%" }} className={turn.name} />
             </Grid>
         );
     });
 
-    //TODO: Finish content and fix layout
     return iconList;
 }
 

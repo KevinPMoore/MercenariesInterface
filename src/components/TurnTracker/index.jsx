@@ -13,8 +13,9 @@ function TurnTracker({ combatants }) {
     }, [combatants]);
 
     //TODO: Update turn list somehow
+    //TODO: Set a cap for displayed indicators at 6
     return (
-        <Grid container height="100%">
+        <Grid container spacing={2} direction="column" height="100%">
             <TurnIndicator turnList={turnList} />
         </Grid>
     );
