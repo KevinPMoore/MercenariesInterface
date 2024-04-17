@@ -31,7 +31,6 @@ function CharacterGroup({ characterList, type }) {
         updateCurrentHP(character);
     });
 
-    //TODO: Cards look weird around 4 entries
     const teamList = characterList.map(character => {
         return (
             <Grid item xs={cardWidth} key={character?.id} height="94%">

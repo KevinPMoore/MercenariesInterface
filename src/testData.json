@@ -30,6 +30,51 @@
             "currentDefense": 100,
             "currentSpecialDefense": 50,
             "currentSpeed": 20
+        },
+        {
+            "id": 1,
+            "name": "Target Dummy",
+            "currentHP": 50,
+            "currentHPMax": 100,
+            "currentDefense": 100,
+            "currentSpecialDefense": 50,
+            "currentSpeed": 20
+        },
+        {
+            "id": 1,
+            "name": "Target Dummy",
+            "currentHP": 50,
+            "currentHPMax": 100,
+            "currentDefense": 100,
+            "currentSpecialDefense": 50,
+            "currentSpeed": 20
+        },
+        {
+            "id": 1,
+            "name": "Target Dummy",
+            "currentHP": 50,
+            "currentHPMax": 100,
+            "currentDefense": 100,
+            "currentSpecialDefense": 50,
+            "currentSpeed": 20
+        },
+        {
+            "id": 1,
+            "name": "Target Dummy",
+            "currentHP": 50,
+            "currentHPMax": 100,
+            "currentDefense": 100,
+            "currentSpecialDefense": 50,
+            "currentSpeed": 20
+        },
+        {
+            "id": 1,
+            "name": "Target Dummy",
+            "currentHP": 50,
+            "currentHPMax": 100,
+            "currentDefense": 100,
+            "currentSpecialDefense": 50,
+            "currentSpeed": 20
         }
     ]
 }
