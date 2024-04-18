@@ -6,7 +6,7 @@ function MoveOption({ move }) {
 
     //TODO: Improve move styling
     return (
-        <Grid item xs={5} key={move?.id}>
+        <Grid item xs={5} key={move?.id} style={{ height: "50%" }}>
             <Button variant="outlined">{move?.name}</Button>
         </Grid>
     );

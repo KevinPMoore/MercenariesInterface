@@ -2,6 +2,7 @@ import { Grid } from "@mui/material";
 import { useContext, useMemo } from "react";
 import PropTypes from "prop-types";
 import MoveOption from "./MoveOption";
+import MovePlaceholder from "./MovePlaceholder";
 import BattleContext from "../../pages/Battle/BattleContext";
 
 function OptionSelect({ height, width }) {
@@ -13,6 +14,22 @@ function OptionSelect({ height, width }) {
         });
     }, [battleContextValue?.selectedMercenary?.moveList]);
 
+    let placeholderType;
+
+    switch (battleContextValue?.selectedMercenary?.moveList?.length) {
+        case 3:
+            placeholderType = "single";
+            break;
+        case 2:
+            placeholderType = "double";
+            break;
+        case 1:
+            placeholderType = "triple";
+            break;
+        default:
+            placeholderType = null;
+    }
+
     return (
         <div
             style={{
@@ -22,8 +39,9 @@ function OptionSelect({ height, width }) {
                 width: width ? `calc(${width} - 2px)` : "calc(100% - 2px)",
             }}
         >
-            <Grid container justifyContent="space-evenly">
+            <Grid container justifyContent="space-evenly" style={{ height: "100%", paddingTop: "12px", paddingBottom: "12px" }}>
                 {moveButtons}
+                {placeholderType && <MovePlaceholder type={placeholderType} />}
             </Grid>
         </div>
     );
