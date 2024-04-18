@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import { useContext, useCallback } from "react";
+import { useContext, useCallback, useMemo } from "react";
 import PropTypes from "prop-types";
 import CharacterCard from "./CharacterCard";
 import setStatsForLevel from "../../utils/setMercenaryStatsForLevel";
@@ -39,13 +39,15 @@ function CharacterGroup({ characterList, type }) {
         updateCurrentHP(character);
     });
 
-    const teamList = characterList.map(character => {
-        return (
-            <Grid item xs={cardWidth} key={character?.id} height="94%">
-                <CharacterCard character={character} selectedFlag={setSelectedFlag(character)} type={type} />
-            </Grid>
-        );
-    });
+    const teamList = useMemo(() => {
+        return characterList.map(character => {
+            return (
+                <Grid item xs={cardWidth} key={character?.id} height="94%">
+                    <CharacterCard character={character} selectedFlag={setSelectedFlag(character)} type={type} />
+                </Grid>
+            );
+        });
+    }, [cardWidth, characterList, setSelectedFlag, type]);
 
     return (
         <Grid container height="50%" justifyContent="space-evenly">

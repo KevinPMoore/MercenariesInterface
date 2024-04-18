@@ -11,7 +11,9 @@ function CharacterCard({ character, selectedFlag, type }) {
                 <Grid container justifyContent="space-between" height="100%">
                     <Grid item xs={12} height="70%">
                         <Typography variant="body1" gutterBottom>
-                            An image of {character?.name} will go here
+                            An image of
+                            {character?.name}
+                            will go here
                         </Typography>
                     </Grid>
                     <Grid item xs={12} height="30%">

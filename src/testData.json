@@ -18,7 +18,30 @@
             "currentSpeed": null,
             "level": 17,
             "ability": {},
-            "moveList": []
+            "moveList": [
+                {
+                    "id": 1,
+                    "name": "Pound",
+                    "power": 40,
+                    "damageType": "physical",
+                    "effectText": "TODO",
+                    "secondaryEffect": {
+                        "effectName": "",
+                        "effectChance": 30
+                    }
+                },
+                {
+                    "id": 2,
+                    "name": "Slash",
+                    "power": 40,
+                    "damageType": "physical",
+                    "effectText": "TODO",
+                    "secondaryEffect": {
+                        "effectName": "",
+                        "effectChance": 30
+                    }
+                }
+            ]
         },
         {
             "id": 2,

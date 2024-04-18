@@ -109,6 +109,17 @@ const unusedMoveList = [
             effectChance: 30,
         },
     },
+    {
+        id: 2,
+        name: "Slash",
+        power: 40,
+        damageType: "physical",
+        effectText: "TODO",
+        secondaryEffect: {
+            effectName: "",
+            effectChance: 30,
+        },
+    },
 ];
 
 export { unusedMercList, unusedMoveList };
