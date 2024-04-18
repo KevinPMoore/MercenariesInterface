@@ -1,12 +1,20 @@
-import { useState } from "react";
 import { Grid } from "@mui/material";
+import { useContext, useCallback } from "react";
 import PropTypes from "prop-types";
 import CharacterCard from "./CharacterCard";
 import setStatsForLevel from "../../utils/setMercenaryStatsForLevel";
 import updateCurrentHP from "../../utils/updateCurrentHP";
+import BattleContext from "./BattleContext";
 
 function CharacterGroup({ characterList, type }) {
-    const [selectedIndex, setSelectedIndex] = useState(null);
+    const battleContextValue = useContext(BattleContext);
+
+    const setSelectedFlag = useCallback(
+        character => {
+            return type === "mercenary" ? battleContextValue?.selectedMercenary === character : battleContextValue?.selectedEnemy === character;
+        },
+        [battleContextValue?.selectedEnemy, battleContextValue?.selectedMercenary, type]
+    );
 
     let cardWidth;
 
@@ -34,13 +42,7 @@ function CharacterGroup({ characterList, type }) {
     const teamList = characterList.map(character => {
         return (
             <Grid item xs={cardWidth} key={character?.id} height="94%">
-                <CharacterCard
-                    character={character}
-                    index={characterList.indexOf(character)}
-                    selected={selectedIndex === characterList.indexOf(character)}
-                    setSelectedIndex={setSelectedIndex}
-                    type={type}
-                />
+                <CharacterCard character={character} selectedFlag={setSelectedFlag(character)} type={type} />
             </Grid>
         );
     });

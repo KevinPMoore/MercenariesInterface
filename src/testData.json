@@ -19,6 +19,25 @@
             "level": 17,
             "ability": {},
             "moveList": []
+        },
+        {
+            "id": 2,
+            "name": "Thief",
+            "baseHP": 85,
+            "baseAttack": 90,
+            "baseDefense": 80,
+            "baseSpecialAttack": 80,
+            "baseSpecialDefense": 80,
+            "baseSpeed": 120,
+            "currentHP": null,
+            "currentAttack": null,
+            "currentDefense": null,
+            "currentSpecialAttack": null,
+            "currentSpecialDefense": null,
+            "currentSpeed": null,
+            "level": 50,
+            "ability": {},
+            "moveList": []
         }
     ],
     "enemyList": [

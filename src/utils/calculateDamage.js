@@ -1,6 +1,6 @@
 import checkCriticalHit from "./checkCriticalHit";
 
-const calculateDamage = (attacker, defender, move) => {
+function calculateDamage(attacker, defender, move) {
     const atkStat = move?.damageType === "physical" ? attacker?.attack : attacker?.specialAttack;
     const defStat = move?.damageType === "physical" ? defender?.defense : defender?.specialDefense;
     const movePower = typeof move?.power === "number" ? move?.power : 0;
@@ -14,6 +14,6 @@ const calculateDamage = (attacker, defender, move) => {
     const damage = Math.round(((((2 * attacker.level) / 5 + 2) * movePower * (atkStat / defStat)) / 50 + 2) * critModifier * damageRoll);
     //TODO: Fx call for secondary effects/non-damaging moves
     return damage;
-};
+}
 
 export default calculateDamage;

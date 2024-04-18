@@ -1,4 +1,4 @@
-const updateCurrentHP = (character, adjustment = 0) => {
+function updateCurrentHP(character, adjustment = 0) {
     //TODO: See if there is a way to optimize this and not have to check !character?.currentHP
     if (!character?.currentHP) {
         Object.assign(character, { currentHP: character?.currentHPMax });
@@ -11,6 +11,6 @@ const updateCurrentHP = (character, adjustment = 0) => {
         }
         Object.assign(character, { currentHP: newHP });
     }
-};
+}
 
 export default updateCurrentHP;
