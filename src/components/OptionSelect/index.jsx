@@ -10,7 +10,7 @@ function OptionSelect({ height, width }) {
 
     const moveButtons = useMemo(() => {
         return battleContextValue?.selectedMercenary?.moveList?.map(move => {
-            return <MoveOption move={move} key={move?.id} />;
+            return <MoveOption move={move} key={`moveOption${move?.id}`} />;
         });
     }, [battleContextValue?.selectedMercenary?.moveList]);
 

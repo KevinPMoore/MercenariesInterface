@@ -12,7 +12,7 @@ function CharacterCard({ character, selectedFlag, type }) {
                     <Grid item xs={12} height="70%">
                         <Typography variant="body1" gutterBottom>
                             An image of
-                            {character?.name}
+                            {` ${character?.name} `}
                             will go here
                         </Typography>
                     </Grid>

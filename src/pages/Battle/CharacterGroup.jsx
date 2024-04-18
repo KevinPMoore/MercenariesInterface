@@ -42,7 +42,7 @@ function CharacterGroup({ characterList, type }) {
     const teamList = useMemo(() => {
         return characterList.map(character => {
             return (
-                <Grid item xs={cardWidth} key={character?.id} height="94%">
+                <Grid item xs={cardWidth} key={type === "mercenary" ? `mercenary${character?.id}` : `enemy${character?.number}`} height="94%">
                     <CharacterCard character={character} selectedFlag={setSelectedFlag(character)} type={type} />
                 </Grid>
             );

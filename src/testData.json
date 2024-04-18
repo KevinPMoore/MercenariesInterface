@@ -71,7 +71,8 @@
             "currentHPMax": 100,
             "currentDefense": 100,
             "currentSpecialDefense": 50,
-            "currentSpeed": 20
+            "currentSpeed": 20,
+            "number": 1
         },
         {
             "id": 1,
@@ -80,7 +81,8 @@
             "currentHPMax": 100,
             "currentDefense": 100,
             "currentSpecialDefense": 50,
-            "currentSpeed": 20
+            "currentSpeed": 20,
+            "number": 2
         },
         {
             "id": 1,
@@ -89,7 +91,8 @@
             "currentHPMax": 100,
             "currentDefense": 100,
             "currentSpecialDefense": 50,
-            "currentSpeed": 20
+            "currentSpeed": 20,
+            "number": 3
         },
         {
             "id": 1,
@@ -98,7 +101,8 @@
             "currentHPMax": 100,
             "currentDefense": 100,
             "currentSpecialDefense": 50,
-            "currentSpeed": 20
+            "currentSpeed": 20,
+            "number": 4
         },
         {
             "id": 1,
@@ -107,7 +111,8 @@
             "currentHPMax": 100,
             "currentDefense": 100,
             "currentSpecialDefense": 50,
-            "currentSpeed": 20
+            "currentSpeed": 20,
+            "number": 5
         },
         {
             "id": 1,
@@ -116,7 +121,8 @@
             "currentHPMax": 100,
             "currentDefense": 100,
             "currentSpecialDefense": 50,
-            "currentSpeed": 20
+            "currentSpeed": 20,
+            "number": 6
         }
     ]
 }
