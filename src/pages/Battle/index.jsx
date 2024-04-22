@@ -8,7 +8,7 @@ import testData from "../../testData.json";
 function Battle() {
     const [selectedMercenary, setSelectedMercenary] = useState(testData?.mercenaryList[0]);
     const [selectedEnemy, setSelectedEnemy] = useState(null);
-    const enemyList = testData?.enemyList;
+    const enemyList = testData?.encounter?.enemyList;
     const mercenaryList = testData?.mercenaryList;
     const combatants = useMemo(() => {
         const result = [];

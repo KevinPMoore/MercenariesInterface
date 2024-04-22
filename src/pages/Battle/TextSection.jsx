@@ -6,7 +6,7 @@ import MoveSelect from "../../components/OptionSelect";
 
 function TextSection() {
     //TODO: Add a set display mode
-    const [displayMode] = useState("dialog");
+    const [displayMode] = useState("battle");
 
     switch (displayMode) {
         case "dialog":
