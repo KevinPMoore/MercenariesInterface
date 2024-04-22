@@ -1,10 +1,8 @@
 import { Grid } from "@mui/material";
 import { useState, useMemo } from "react";
 import BattleContext from "./BattleContext";
-import CharacterGroup from "./CharacterGroup";
-//TODO: Rename BattleText and MoveSelect once they are more fleshed out
-import BattleText from "../../components/TextBox";
-import MoveSelect from "../../components/OptionSelect";
+import CharacterSection from "./CharacterSection";
+import TextSection from "./TextSection";
 import testData from "../../testData.json";
 
 function Battle() {
@@ -20,6 +18,7 @@ function Battle() {
         return result;
     }, [enemyList, mercenaryList]);
 
+    //TODO: Separate context values to lower components if appropriate
     const battleContextProviderValue = useMemo(() => {
         return {
             combatants,
@@ -34,18 +33,10 @@ function Battle() {
         <BattleContext.Provider value={battleContextProviderValue}>
             <Grid container direction="column" height="100%" width="100%">
                 <Grid item xs={9}>
-                    <Grid container height="100%" width="100%">
-                        <Grid item xs={12} height="100%">
-                            <CharacterGroup characterList={enemyList} type="enemy" />
-                            <CharacterGroup characterList={mercenaryList} type="mercenary" />
-                        </Grid>
-                    </Grid>
+                    <CharacterSection enemyList={enemyList} mercenaryList={mercenaryList} />
                 </Grid>
                 <Grid item xs={3}>
-                    <Grid container height="100%" width="100%">
-                        <BattleText width="70%" />
-                        <MoveSelect width="30%" />
-                    </Grid>
+                    <TextSection />
                 </Grid>
             </Grid>
         </BattleContext.Provider>
