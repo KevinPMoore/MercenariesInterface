@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { Grid } from "@mui/material";
-import { ReactTyped } from "react-typed";
+import TextDisplay from "./TextDisplay";
 
 //TODO: Take in a list of messages and display them as new lines
 function TextBox({ height, width }) {
@@ -14,12 +14,7 @@ function TextBox({ height, width }) {
             }}
         >
             <Grid container direction="column" style={{ padding: "12px" }}>
-                <Grid item>
-                    <ReactTyped strings={["A wild target dummy appeared!"]} onComplete={() => console.log("i have stopped")} typeSpeed={40} showCursor={false} />
-                </Grid>
-                <Grid item>
-                    <ReactTyped strings={[""]} typeSpeed={40} showCursor={false} />
-                </Grid>
+                <TextDisplay textList={["I am the first text", "and I am the second text..", "MWAHAHA I AM THE THIRD TEXT!"]} />
             </Grid>
         </div>
     );

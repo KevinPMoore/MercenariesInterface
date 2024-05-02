@@ -1,5 +1,5 @@
-import { Grid } from "@mui/material";
 import { useState } from "react";
+import { Grid } from "@mui/material";
 //TODO: Rename BattleText and MoveSelect once they are more fleshed out
 import BattleText from "../../components/TextBox";
 import MoveSelect from "../../components/OptionSelect";
