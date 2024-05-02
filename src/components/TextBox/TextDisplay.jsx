@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import { Grid } from "@mui/material";
 import { ReactTyped } from "react-typed";
 
-function TextDisplay({ textList }) {
+function TextDisplay({ textList, setTextCompleteFlag }) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     return (
-        <>
+        <Grid container height="100%" width="100%">
             {textList.map((text, index) => {
                 if (index <= currentIndex) {
                     return (
@@ -20,6 +20,9 @@ function TextDisplay({ textList }) {
                                     if (index === currentIndex && currentIndex < textList.length - 1) {
                                         setCurrentIndex(prevIndex => prevIndex + 1);
                                     }
+                                    if (index === currentIndex && currentIndex === textList.length - 1) {
+                                        setTextCompleteFlag(true);
+                                    }
                                 }}
                                 showCursor={false}
                             />
@@ -28,12 +31,13 @@ function TextDisplay({ textList }) {
                 }
                 return null;
             })}
-        </>
+        </Grid>
     );
 }
 
 TextDisplay.propTypes = {
     textList: PropTypes.arrayOf(PropTypes.string),
+    setTextCompleteFlag: PropTypes.func,
 };
 
 export default TextDisplay;

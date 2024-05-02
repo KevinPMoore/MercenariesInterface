@@ -1,9 +1,14 @@
+import { useState } from "react";
 import PropTypes from "prop-types";
 import { Grid } from "@mui/material";
 import TextDisplay from "./TextDisplay";
+import AdvanceTextButton from "./AdvanceTextButton";
 
-//TODO: Take in a list of messages and display them as new lines
 function TextBox({ height, width }) {
+    const [textCompleteFlag, setTextCompleteFlag] = useState(false);
+
+    const textList1 = ["I am the first text", "and I am the second text..", "would you believe there is a third text?"];
+
     return (
         <div
             style={{
@@ -13,8 +18,13 @@ function TextBox({ height, width }) {
                 width: width ? `calc(${width} - 2px)` : "calc(100% - 2px)",
             }}
         >
-            <Grid container direction="column" style={{ padding: "12px" }}>
-                <TextDisplay textList={["I am the first text", "and I am the second text..", "MWAHAHA I AM THE THIRD TEXT!"]} />
+            <Grid container direction="column" style={{ height: "100%", padding: "12px" }}>
+                <Grid item height="100%" width="90%">
+                    <TextDisplay textList={textList1} setTextCompleteFlag={setTextCompleteFlag} />
+                </Grid>
+                <Grid item height="100%" width="10%">
+                    <AdvanceTextButton displayButtonFlag={textCompleteFlag} onClickCallback={() => setTextCompleteFlag(false)} />
+                </Grid>
             </Grid>
         </div>
     );
