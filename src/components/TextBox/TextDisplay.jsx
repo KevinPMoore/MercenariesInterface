@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Grid } from "@mui/material";
 import { ReactTyped } from "react-typed";
 
-function TextDisplay({ textList, setTextCompleteFlag }) {
+function TextDisplay({ textList, typeSpeed, setTextCompleteFlag }) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     return (
@@ -15,7 +15,7 @@ function TextDisplay({ textList, setTextCompleteFlag }) {
                             <ReactTyped
                                 key={text}
                                 strings={[text]}
-                                typeSpeed={40}
+                                typeSpeed={typeSpeed || 40}
                                 onComplete={() => {
                                     if (index === currentIndex && currentIndex < textList.length - 1) {
                                         setCurrentIndex(prevIndex => prevIndex + 1);
@@ -37,6 +37,7 @@ function TextDisplay({ textList, setTextCompleteFlag }) {
 
 TextDisplay.propTypes = {
     textList: PropTypes.arrayOf(PropTypes.string),
+    typeSpeed: PropTypes.number,
     setTextCompleteFlag: PropTypes.func,
 };
 

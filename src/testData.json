@@ -126,6 +126,6 @@
                 "number": 6
             }
         ],
-        "startText": "Six wild target dummies appeared!"
+        "startText": ["I am the first text", "and I am the second text..", "would you believe there is a third text?"]
     }
 }

@@ -5,14 +5,13 @@ import BattleText from "../../components/TextBox";
 import MoveSelect from "../../components/OptionSelect";
 
 function TextSection() {
-    //TODO: Add a set display mode
-    const [displayMode] = useState("battle");
+    const [displayMode, setDisplayMode] = useState("dialog");
 
     switch (displayMode) {
         case "dialog":
             return (
                 <Grid container height="100%" width="100%">
-                    <BattleText width="100%" />
+                    <BattleText displayMode={displayMode} setDisplayMode={setDisplayMode} width="100%" />
                 </Grid>
             );
         case "battle":
