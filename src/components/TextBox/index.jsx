@@ -1,27 +1,12 @@
-import { useState, useContext, useMemo, useCallback } from "react";
-import PropTypes from "prop-types";
 import { Grid } from "@mui/material";
+import { PropTypes } from "prop-types";
 import TextDisplay from "./TextDisplay";
 import AdvanceTextButton from "./AdvanceTextButton";
-import BattleContext from "../../pages/Battle/BattleContext";
-import testData from "../../testData.json";
+import useTypewriter from "./useTypewriter";
 
+//TODO: Fix the onClickCallback on AdvanceTextButton
 function TextBox({ displayMode, setDisplayMode, height, width }) {
-    const [textCompleteFlag, setTextCompleteFlag] = useState(false);
-
-    const battleContextValue = useContext(BattleContext);
-
-    const textToDisplay = useMemo(
-        () => (displayMode === "dialog" ? testData?.encounter?.startText : [`What will ${battleContextValue?.selectedMercenary?.name} do?`]),
-        [battleContextValue?.selectedMercenary?.name, displayMode]
-    );
-
-    const handleAdvanceText = useCallback(() => {
-        if (displayMode === "dialog") {
-            setDisplayMode("battle");
-        }
-        setTextCompleteFlag(false);
-    }, [displayMode, setDisplayMode]);
+    const { displayText, typewriterCompleteFlag } = useTypewriter("abcdefghijklmnopqrstuvwxyz", 50);
 
     return (
         <div
@@ -34,10 +19,22 @@ function TextBox({ displayMode, setDisplayMode, height, width }) {
         >
             <Grid container direction="column" style={{ height: "100%", padding: "12px" }}>
                 <Grid item height="100%" width="90%">
-                    <TextDisplay textList={textToDisplay} setTextCompleteFlag={setTextCompleteFlag} />
+                    <TextDisplay text={displayText} />
                 </Grid>
                 <Grid item height="100%" width="10%">
-                    <AdvanceTextButton displayButtonFlag={textCompleteFlag} onClickCallback={handleAdvanceText} />
+                    {/* // could put the status check logic for the callback in the button itself. Otherwise maybe don't use a custom component? That would let you put the animate
+                    presence around a vanilla button at this level.
+                    // You could even have separate buttons for fast forwarding and moving to the next text to really make things
+                    decoupled. */}
+                    {/* <AdvanceTextButton displayButtonFlag={currentIndex < length || status === "end"} onClickCallback={() => (status === "typing" ? fastForward : typeNext)} /> */}
+                    <AdvanceTextButton
+                        displayButtonFlag={typewriterCompleteFlag}
+                        onClickCallback={() => {
+                            if (displayMode === "dialog") {
+                                setDisplayMode("battle");
+                            }
+                        }}
+                    />
                 </Grid>
             </Grid>
         </div>
